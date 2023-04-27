@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agents - CampusHome</title>
+
+    
+      {% comment %} Font awesome link {% endcomment %}
+      <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+      <link href="{% static 'fontawesomefree/css/all.min.css' %}"  rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/AgentPage.css' %}">
+</head>
+<body>
+    
+
+    <header>
+        <div class="header-area">
+             <h1 class='site_logo'>CampusHome</h1>
+             <!-- Navigation bar with links to sign in and create account pages -->
+             <nav>
+                 <ul>
+                     <li><a href="{% url 'home' %}">Home</a></li>
+                     <li><a href="{% url 'Agent_details' %}">Add Listing</a></li>
+                     {% if user.is_authenticated %}
+                     <li class='colored'><a href="{% url 'inbox' %}">Dashboard</a></li>
+                     {% else %}
+                     <li class='colored'><a href="{% url 'register' %}">Create account</a></li>
+                     {% endif %}
+                 </ul>
+             </nav>
+        </div>
+     </header>
+     <main>
+        <section class="hero-section">
+            <img src="{% static 'images/houseAgents.jpg' %}" alt="">
+            <div class="text-container">
+                <h1>"Find the perfect tenant for your   rental property"</h1>
+                    <div class="hero-links">
+                        <a href="{% url 'Agent_details' %}" class='colored-link'>Add an apartment </a>
+                        {% comment %} <a href="" class='not-colored'>Contact Us <i class="fa-solid fa-arrow-right-long"></i></a> {% endcomment %}
+                    </div>
+            </div>
+            
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+        
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+     </main>
+
+     
+
+    
+</body>
+</html>
